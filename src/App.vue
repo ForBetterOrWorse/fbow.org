@@ -45,7 +45,7 @@ main {
 }
 
 .intro {
-  width: 40%;
+  width: 50%;
   font-size: 24px;
 }
 

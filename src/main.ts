@@ -1,3 +1,4 @@
+import '@fontsource/raleway/400.css'
 import './assets/base.css'
 
 import { createApp } from 'vue'

@@ -1,85 +1,69 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="container">
+    <header>
+      <h1>For Better or Worse</h1>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <main>
+      <div class="intro">
+        <p>
+          This page exists because a group of daydreamers came together and decided to create a
+          space where they could turn their what-ifs into reality, for better or worse.<br />We're
+          just getting started, though, so there isn't much to share.
+        </p>
+        <p>
+          Thank you for stopping by.<br />Be sure to smile before you go back to your day. Or don't.
+          Just stay grumpy, we don't really care.
+        </p>
+      </div>
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
+@import './assets/variables.css';
+
+.container {
+  height: 100vh;
+  position: relative;
+  padding: 16px;
+}
+
+h1 {
   line-height: 1.5;
-  max-height: 100vh;
+  font-size: 18px;
+  /* This is temporary, until we have a nav and potentially make this h1 visually hidden */
+  position: absolute;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.intro {
+  width: 50%;
+  font-size: 24px;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+p {
+  margin-bottom: 16px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+/* TODO: Replace the hard-coded number with a variable
+   See https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media */
+@media (max-width: 480px) {
+  .intro {
+    width: 100%;
   }
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media (max-width: 768px) {
+  .intro {
+    width: 80%;
   }
 }
 </style>

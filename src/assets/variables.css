@@ -1,0 +1,31 @@
+/* Use this block for color tokens */
+:root {
+  --gray00: #ffffff;
+
+  --yellow10: #d0db97;
+
+  --green10: #69b578;
+  --green20: #3a7d44;
+  --green30: #254d32;
+
+  --blue40: #181d27;
+}
+
+/* Use this block for semantic color variables and other stuff */
+:root {
+  /* Semantic color variables */
+  --background-color: var(--blue40);
+  --text-color: var(--gray00);
+
+  --section-gap: 160px;
+
+  /* Breakpoints */
+  /** 
+    * We use desktop-first strategy, so styling should be:
+    * - Default: greater than 1024px
+    * - Other devices: @media (max-width: var(--m-breakpoint))
+   */
+  --laptop-breakpoint: 1280px; /* laptops */
+  --tablet-breakpoint: 768px; /* tablets */
+  --phone-breakpoint: 480px; /* phones */
+}

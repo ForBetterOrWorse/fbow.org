@@ -15,7 +15,8 @@
 :root {
   /* Semantic color variables */
   --background-color: var(--blue40);
-  --text-color: var(--gray00);
+  --text-color-primary: var(--gray00);
+  --text-color-brand: var(--yellow10);
 
   --section-gap: 160px;
 

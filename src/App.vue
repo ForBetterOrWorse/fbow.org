@@ -8,8 +8,9 @@
       <div class="intro">
         <p>
           This page exists because a group of daydreamers came together and decided to create a
-          space where they could turn their what-ifs into reality, for better or worse.<br />We're
-          just getting started, though, so there isn't much to share.
+          space where they could turn their what-ifs into reality,
+          <span class="tagline">for better or worse</span>.<br />We're just getting started, though,
+          so there isn't much to share.
         </p>
         <p>
           Thank you for stopping by.<br />Be sure to smile before you go back to your day. Or don't.
@@ -25,15 +26,19 @@
 
 .container {
   height: 100vh;
-  position: relative;
   padding: 16px;
 }
 
 h1 {
   line-height: 1.5;
   font-size: 18px;
-  /* This is temporary, until we have a nav and potentially make this h1 visually hidden */
-  position: absolute;
+  /* Visually hidden */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
 }
 
 main {
@@ -51,6 +56,11 @@ main {
 
 p {
   margin-bottom: 16px;
+}
+
+.tagline {
+  font-weight: 600;
+  color: var(--text-color-brand);
 }
 
 /* TODO: Replace the hard-coded number with a variable

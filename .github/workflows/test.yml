@@ -2,9 +2,9 @@ name: Unit Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   test:
@@ -34,4 +34,4 @@ jobs:
         run: pnpm run type-check
 
       - name: Run unit tests
-        run: pnpm run test:unit
+        run: pnpm run test
